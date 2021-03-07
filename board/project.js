@@ -1,3 +1,4 @@
+const { spawn } = require('child_process');
 const fs = require('fs');
 
 //doesn't need to be exported
@@ -49,6 +50,7 @@ module.exports = {
             try {
                 fs.writeFile(`./.kanban/${name}.json`, JSON.stringify(obj), err => {
                     err && rej(err);
+                    spawn('git', ['-am', `"Update ${name} Project"`]);
                 });
             } catch (err) {
                 console.error(err);
