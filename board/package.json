@@ -1,0 +1,25 @@
+{
+  "name": "board",
+  "version": "1.0.0",
+  "description": "Kandban Board CLI",
+  "main": "index.js",
+  "scripts": {
+    "build": "bash build tm",
+    "link": "export PATH=$PATH:$(pwd)/dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unitehenry/"
+  },
+  "keywords": [
+    "Kanban",
+    "Board"
+  ],
+  "author": "Profhacks 2021 Team 10",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}

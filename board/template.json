@@ -1,0 +1,18 @@
+{
+    "projectName": "New Project",
+    "members": [],
+    "buckets": [
+        {
+            "name": "To Do",
+            "cards": []
+        },
+        {
+            "name": "In Progress",
+            "cards": []
+        },
+        {
+            "name": "Done",
+            "cards": []
+        }
+    ]
+}

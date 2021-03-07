@@ -1,0 +1,9 @@
+#!/bin/bash
+rm -rf dist;
+mkdir dist;
+touch dist/$1;
+echo "#!/usr/bin/env node" >> dist/$1;
+cp *.js dist;
+cp template.json dist;
+cat index.js >> dist/$1;
+chmod +x dist/$1;
