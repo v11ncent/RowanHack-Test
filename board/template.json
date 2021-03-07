@@ -7,8 +7,9 @@
             "name": "To Do",
             "tasks": [
                 {
+                    "id": null,
                     "name": "Your First To Do Card",
-                    "desc": "Give me a description for the To Do task!"
+                    "description": "Give me a description for the To Do task!"
                 }
             ]
         },
@@ -17,8 +18,9 @@
             "name": "In Progress",
             "tasks": [
                 {
+                    "id": null,
                     "name": "Baby's First In Progress Card",
-                    "desc": "Give me a description for the In Progress task!"
+                    "description": "Give me a description for the In Progress task!"
                 }
             ]
         },
@@ -27,8 +29,9 @@
             "name": "Done",
             "tasks": [
                 {
-                    "name": "Woohoo! Done Card Title here!",
-                    "desc": "Yay! This task is done. Go grab something to eat."
+                    "id": null,
+                    "name": "Woohoo! Done Card Title!",
+                    "description": "Yay! This task is done. Go grab something to eat."
                 }
             ]
         }

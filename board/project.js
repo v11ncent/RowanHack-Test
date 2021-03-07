@@ -21,11 +21,15 @@ module.exports = {
     createProject(name) {
         return new Promise((resolve, reject) => {
             const project = require('./template.json');
-            //name param = new project name
             project['projectName'] = name;
+            
             project.buckets.forEach(e => {
                 e.id = shortid.generate();
-            })
+                e.tasks.forEach(t => {
+                    t.id = shortid.generate();
+                });
+            });
+
             try {
                 //If kanban dir does not exist, create it
                 if (!exists()) {
@@ -53,7 +57,7 @@ module.exports = {
             try {
                 fs.writeFile(`./.kanban/${name}.json`, JSON.stringify(obj), err => {
                     err && rej(err);
-                    spawn('git', ['-am', `"Update ${name} Project"`]);
+                    // spawn('git', ['-am', `"Update ${name} Project"`]);
                 });
             } catch (err) {
                 console.error(err);
@@ -107,9 +111,8 @@ module.exports = {
             }
             try {
                 fs.readFile(`./.kanban/${name}.json`, 'utf-8', (err, data) => {
-                    console.log(data);
                     err && rej(err);
-                    res(data);
+                    res(JSON.parse(data));
                 })
             } catch (err) {
                 console.error(err);
