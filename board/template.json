@@ -3,16 +3,34 @@
     "members": [],
     "buckets": [
         {
+            "id": null,
             "name": "To Do",
-            "cards": []
+            "tasks": [
+                {
+                    "name": "Your First To Do Card",
+                    "desc": "Give me a description for the To Do task!"
+                }
+            ]
         },
         {
+            "id": null,
             "name": "In Progress",
-            "cards": []
+            "tasks": [
+                {
+                    "name": "Baby's First In Progress Card",
+                    "desc": "Give me a description for the In Progress task!"
+                }
+            ]
         },
         {
+            "id": null,
             "name": "Done",
-            "cards": []
+            "tasks": [
+                {
+                    "name": "Woohoo! Done Card Title here!",
+                    "desc": "Yay! This task is done. Go grab something to eat."
+                }
+            ]
         }
     ]
 }

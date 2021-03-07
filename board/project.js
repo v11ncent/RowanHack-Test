@@ -1,5 +1,6 @@
 const { spawn } = require('child_process');
 const fs = require('fs');
+const shortid = require('shortid');
 
 //doesn't need to be exported
 //true if checking for file, else false
@@ -22,7 +23,9 @@ module.exports = {
             const project = require('./template.json');
             //name param = new project name
             project['projectName'] = name;
-
+            project.buckets.forEach(e => {
+                e.id = shortid.generate();
+            })
             try {
                 //If kanban dir does not exist, create it
                 if (!exists()) {
